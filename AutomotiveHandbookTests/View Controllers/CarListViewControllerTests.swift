@@ -32,4 +32,8 @@ class CarListViewControllerTests: XCTestCase {
     func testWhenViewIsLoadedCarListDataSourceIsNotNil() {
         XCTAssertNotNil(sut.dataSource)
     }
+    
+    func testWhenViewIsLoadedTableViewDataSourceIsSet() {
+        XCTAssertTrue(sut.tableView.dataSource is CarListDataSource)
+    }
 }

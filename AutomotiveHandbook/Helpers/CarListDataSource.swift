@@ -6,8 +6,21 @@
 //  Copyright © 2020 Denis Abramov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CarListDataSource: NSObject {
     
+}
+
+// MARK: - UITableViewDataSource
+extension CarListDataSource: UITableViewDataSource {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }
