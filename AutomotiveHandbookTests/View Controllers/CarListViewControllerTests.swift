@@ -23,4 +23,11 @@ class CarListViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         XCTAssertNotNil(sut.tableView)
     }
+    
+    func testWhenViewIsLoadedCarListDataSourceIsNotNil() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut = storyboard.instantiateViewController(identifier: "CarListViewController") as! CarListViewController
+        sut.loadViewIfNeeded()
+        XCTAssertNotNil(sut.dataSource)
+    }
 }

@@ -10,4 +10,5 @@ import UIKit
 
 class CarListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var dataSource: CarListDataSource!
 }

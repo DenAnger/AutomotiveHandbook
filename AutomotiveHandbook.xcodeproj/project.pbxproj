@@ -20,6 +20,7 @@
 		69B5A2CD251355090008367D /* CarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2CC251355090008367D /* CarManagerTests.swift */; };
 		69B5A2D0251355280008367D /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2CF251355280008367D /* CarManager.swift */; };
 		69B5A2D3251365980008367D /* CarListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2D2251365980008367D /* CarListViewControllerTests.swift */; };
+		69B5A2D5251367E50008367D /* CarListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2D4251367E50008367D /* CarListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		69B5A2CC251355090008367D /* CarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarManagerTests.swift; sourceTree = "<group>"; };
 		69B5A2CF251355280008367D /* CarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
 		69B5A2D2251365980008367D /* CarListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewControllerTests.swift; sourceTree = "<group>"; };
+		69B5A2D4251367E50008367D /* CarListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				69B5A2CF251355280008367D /* CarManager.swift */,
+				69B5A2D4251367E50008367D /* CarListDataSource.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69B5A293251345C60008367D /* CarListViewController.swift in Sources */,
+				69B5A2D5251367E50008367D /* CarListDataSource.swift in Sources */,
 				69B5A28F251345C60008367D /* AppDelegate.swift in Sources */,
 				69B5A2C925134B320008367D /* Car.swift in Sources */,
 				69B5A291251345C60008367D /* SceneDelegate.swift in Sources */,
