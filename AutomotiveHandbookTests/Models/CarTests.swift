@@ -11,15 +11,17 @@ import XCTest
 
 class CarTests: XCTestCase {
     
-    let car = Car(yearOfIssue: "Foo",
-                  manufacture: "Bar",
-                  model: "Baz",
-                  bodyType: "Bat")
+    var car: Car!
 
     override func setUpWithError() throws {
+        car = Car(yearOfIssue: "Foo",
+                      manufacture: "Bar",
+                      model: "Baz",
+                      bodyType: "Bat")
     }
 
     override func tearDownWithError() throws {
+        car = nil
     }
     
     func testInitCarWithParameters() {

@@ -10,20 +10,22 @@ import XCTest
 @testable import AutomotiveHandbook
 
 class CarManagerTests: XCTestCase {
+    
+    var carManager: CarManager!
 
     override func setUpWithError() throws {
+        carManager = CarManager()
     }
 
     override func tearDownWithError() throws {
+        carManager = nil
     }
     
     func testInitCarManagerWithEmptyList() {
-        let carManager = CarManager()
         XCTAssertEqual(carManager.carsCount, 0)
     }
     
     func testAddCarIncrementCarListCount() {
-        let carManager = CarManager()
         let car = Car(yearOfIssue: "Foo",
                       manufacture: "Bar",
                       model: "Baz",
