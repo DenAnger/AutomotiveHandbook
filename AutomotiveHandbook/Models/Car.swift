@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Car {
+struct Car: Equatable {
     var yearOfIssue: String
     var manufacture: String
     var model: String

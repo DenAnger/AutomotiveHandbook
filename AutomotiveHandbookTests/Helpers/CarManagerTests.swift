@@ -41,4 +41,16 @@ class CarManagerTests: XCTestCase {
         let returnedCar = carManager.car(at: 0)
         XCTAssertEqual(car.yearOfIssue, returnedCar.yearOfIssue)
     }
+    
+    func testAddingSameObjectDoesNotIncrementCount() {
+        carManager.add(car: Car(yearOfIssue: "Foo",
+                                manufacture: "Bar",
+                                model: "Baz",
+                                bodyType: "Bat"))
+        carManager.add(car: Car(yearOfIssue: "Foo",
+                                manufacture: "Bar",
+                                model: "Baz",
+                                bodyType: "Bat"))
+        XCTAssertEqual(carManager.carsCount, 1)
+    }
 }

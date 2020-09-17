@@ -14,7 +14,9 @@ class CarManager {
     private var cars: [Car] = []
     
     func add(car: Car) {
-        cars.append(car)
+        if !cars.contains(car) {
+            cars.append(car)
+        }
     }
     
     func car(at index: Int) -> Car {
