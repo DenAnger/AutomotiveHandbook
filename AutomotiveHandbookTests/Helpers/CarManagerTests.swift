@@ -33,4 +33,14 @@ class CarManagerTests: XCTestCase {
         carManager.add(car: car)
         XCTAssertEqual(carManager.carsCount, 1)
     }
+    
+    func testCarAtIndexIsAddedCar() {
+        let car = Car(yearOfIssue: "Foo",
+                      manufacture: "Bar",
+                      model: "Baz",
+                      bodyType: "Bat")
+        carManager.add(car: car)
+        let returnedCar = carManager.car(at: 0)
+        XCTAssertEqual(car.yearOfIssue, returnedCar.yearOfIssue)
+    }
 }
