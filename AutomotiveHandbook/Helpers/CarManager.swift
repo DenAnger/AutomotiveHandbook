@@ -9,12 +9,11 @@
 import Foundation
 
 class CarManager {
-    var carsCount = 0
+    var carsCount: Int { return cars.count }
     
     private var cars: [Car] = []
     
     func add(car: Car) {
-        carsCount += 1
         cars.append(car)
     }
     

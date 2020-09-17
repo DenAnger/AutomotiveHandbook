@@ -12,13 +12,19 @@ import XCTest
 class CarManagerTests: XCTestCase {
     
     var carManager: CarManager!
+    var car: Car!
 
     override func setUpWithError() throws {
         carManager = CarManager()
+        car = Car(yearOfIssue: "Foo",
+        manufacture: "Bar",
+        model: "Baz",
+        bodyType: "Bat")
     }
 
     override func tearDownWithError() throws {
         carManager = nil
+        car = nil
     }
     
     func testInitCarManagerWithEmptyList() {
@@ -26,19 +32,11 @@ class CarManagerTests: XCTestCase {
     }
     
     func testAddCarIncrementCarListCount() {
-        let car = Car(yearOfIssue: "Foo",
-                      manufacture: "Bar",
-                      model: "Baz",
-                      bodyType: "Bat")
         carManager.add(car: car)
         XCTAssertEqual(carManager.carsCount, 1)
     }
     
     func testCarAtIndexIsAddedCar() {
-        let car = Car(yearOfIssue: "Foo",
-                      manufacture: "Bar",
-                      model: "Baz",
-                      bodyType: "Bat")
         carManager.add(car: car)
         let returnedCar = carManager.car(at: 0)
         XCTAssertEqual(car.yearOfIssue, returnedCar.yearOfIssue)
