@@ -9,5 +9,9 @@
 import Foundation
 
 class CarManager {
-    let carsCount = 0
+    var carsCount = 0
+    
+    func add(car: Car) {
+        carsCount += 1
+    }
 }
