@@ -15,6 +15,8 @@
 		69B5A29B251345D00008367D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B5A299251345D00008367D /* LaunchScreen.storyboard */; };
 		69B5A2A6251345D00008367D /* AutomotiveHandbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2A5251345D00008367D /* AutomotiveHandbookTests.swift */; };
 		69B5A2B1251345D00008367D /* AutomotiveHandbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2B0251345D00008367D /* AutomotiveHandbookUITests.swift */; };
+		69B5A2C725134B120008367D /* CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2C625134B120008367D /* CarTests.swift */; };
+		69B5A2C925134B320008367D /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2C825134B320008367D /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		69B5A2AC251345D00008367D /* AutomotiveHandbookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomotiveHandbookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B5A2B0251345D00008367D /* AutomotiveHandbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomotiveHandbookUITests.swift; sourceTree = "<group>"; };
 		69B5A2B2251345D00008367D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69B5A2C625134B120008367D /* CarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTests.swift; sourceTree = "<group>"; };
+		69B5A2C825134B320008367D /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		69B5A28D251345C60008367D /* AutomotiveHandbook */ = {
 			isa = PBXGroup;
 			children = (
+				69B5A2C425134AD30008367D /* Models */,
 				69B5A2C1251346A10008367D /* ViewControllers */,
 				69B5A2BF251346860008367D /* Storyboards */,
 				69B5A2C0251346960008367D /* Resources */,
@@ -110,6 +115,7 @@
 		69B5A2A4251345D00008367D /* AutomotiveHandbookTests */ = {
 			isa = PBXGroup;
 			children = (
+				69B5A2C525134AE20008367D /* Models */,
 				69B5A2C2251347B40008367D /* Supports */,
 			);
 			path = AutomotiveHandbookTests;
@@ -174,6 +180,22 @@
 				69B5A2B2251345D00008367D /* Info.plist */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		69B5A2C425134AD30008367D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69B5A2C825134B320008367D /* Car.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		69B5A2C525134AE20008367D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69B5A2C625134B120008367D /* CarTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +331,7 @@
 			files = (
 				69B5A293251345C60008367D /* ViewController.swift in Sources */,
 				69B5A28F251345C60008367D /* AppDelegate.swift in Sources */,
+				69B5A2C925134B320008367D /* Car.swift in Sources */,
 				69B5A291251345C60008367D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B5A2C725134B120008367D /* CarTests.swift in Sources */,
 				69B5A2A6251345D00008367D /* AutomotiveHandbookTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
