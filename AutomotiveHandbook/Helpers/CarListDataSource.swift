@@ -9,14 +9,14 @@
 import UIKit
 
 class CarListDataSource: NSObject {
-    
+    var carManager: CarManager?
 }
 
 // MARK: - UITableViewDataSource
 extension CarListDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView,

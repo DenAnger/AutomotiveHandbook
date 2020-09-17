@@ -17,9 +17,9 @@ class CarManagerTests: XCTestCase {
     override func setUpWithError() throws {
         carManager = CarManager()
         car = Car(yearOfIssue: "Foo",
-        manufacture: "Bar",
-        model: "Baz",
-        bodyType: "Bat")
+                  manufacture: "Bar",
+                  model: "Baz",
+                  bodyType: "Bat")
     }
 
     override func tearDownWithError() throws {
