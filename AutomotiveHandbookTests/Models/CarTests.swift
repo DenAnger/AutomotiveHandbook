@@ -21,4 +21,12 @@ class CarTests: XCTestCase {
         let car = Car(yearOfIssue: "Foo", manufacture: "Bar", model: "Baz", bodyType: "Bat")
         XCTAssertNotNil(car)
     }
+    
+    func testWhenGivenCarParameters() {
+        let car = Car(yearOfIssue: "Foo", manufacture: "Bar", model: "Baz", bodyType: "Bat")
+        XCTAssertEqual(car.yearOfIssue, "Foo")
+        XCTAssertEqual(car.manufacture, "Bar")
+        XCTAssertEqual(car.model, "Baz")
+        XCTAssertEqual(car.bodyType, "Bat")
+    }
 }
