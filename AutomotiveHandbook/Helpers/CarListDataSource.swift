@@ -16,7 +16,7 @@ class CarListDataSource: NSObject {
 extension CarListDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return carManager?.carsCount ?? 0
     }
     
     func tableView(_ tableView: UITableView,

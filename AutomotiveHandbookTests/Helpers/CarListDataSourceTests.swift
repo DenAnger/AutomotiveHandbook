@@ -28,6 +28,8 @@ class CarListDataSourceTests: XCTestCase {
     
     func testNumberOfRowEqualsCarListCount() {
         let dataSource = CarListDataSource()
+        dataSource.carManager = CarManager()
+        
         let tableView = UITableView()
         tableView.dataSource = dataSource
         
@@ -36,5 +38,12 @@ class CarListDataSourceTests: XCTestCase {
                                             model: "Baz",
                                             bodyType: "Bat"))
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 1)
+        
+        dataSource.carManager?.add(car: Car(yearOfIssue: "Bat",
+                                            manufacture: "Baz",
+                                            model: "Bar",
+                                            bodyType: "Foo"))
+        tableView.reloadData()
+        XCTAssertEqual(tableView.numberOfRows(inSection: 0), 2)
     }
 }
