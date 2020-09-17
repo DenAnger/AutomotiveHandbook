@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		69B5A28F251345C60008367D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A28E251345C60008367D /* AppDelegate.swift */; };
 		69B5A291251345C60008367D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A290251345C60008367D /* SceneDelegate.swift */; };
-		69B5A293251345C60008367D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A292251345C60008367D /* ViewController.swift */; };
+		69B5A293251345C60008367D /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A292251345C60008367D /* CarListViewController.swift */; };
 		69B5A296251345C60008367D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B5A294251345C60008367D /* Main.storyboard */; };
 		69B5A298251345D00008367D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B5A297251345D00008367D /* Assets.xcassets */; };
 		69B5A29B251345D00008367D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B5A299251345D00008367D /* LaunchScreen.storyboard */; };
@@ -19,6 +19,7 @@
 		69B5A2C925134B320008367D /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2C825134B320008367D /* Car.swift */; };
 		69B5A2CD251355090008367D /* CarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2CC251355090008367D /* CarManagerTests.swift */; };
 		69B5A2D0251355280008367D /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2CF251355280008367D /* CarManager.swift */; };
+		69B5A2D3251365980008367D /* CarListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2D2251365980008367D /* CarListViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 		69B5A28B251345C60008367D /* AutomotiveHandbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomotiveHandbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B5A28E251345C60008367D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69B5A290251345C60008367D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69B5A292251345C60008367D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69B5A292251345C60008367D /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
 		69B5A295251345C60008367D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69B5A297251345D00008367D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69B5A29A251345D00008367D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		69B5A2C825134B320008367D /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		69B5A2CC251355090008367D /* CarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarManagerTests.swift; sourceTree = "<group>"; };
 		69B5A2CF251355280008367D /* CarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
+		69B5A2D2251365980008367D /* CarListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +111,7 @@
 			children = (
 				69B5A2CE251355120008367D /* Helpers */,
 				69B5A2C425134AD30008367D /* Models */,
-				69B5A2C1251346A10008367D /* ViewControllers */,
+				69B5A2C1251346A10008367D /* View Controllers */,
 				69B5A2BF251346860008367D /* Storyboards */,
 				69B5A2C0251346960008367D /* Resources */,
 				69B5A2BE2513464E0008367D /* Supports */,
@@ -122,6 +124,7 @@
 			children = (
 				69B5A2CB251353D40008367D /* Helpers */,
 				69B5A2C525134AE20008367D /* Models */,
+				69B5A2D1251365540008367D /* View Controllers */,
 				69B5A2C2251347B40008367D /* Supports */,
 			);
 			path = AutomotiveHandbookTests;
@@ -162,12 +165,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		69B5A2C1251346A10008367D /* ViewControllers */ = {
+		69B5A2C1251346A10008367D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				69B5A292251345C60008367D /* ViewController.swift */,
+				69B5A292251345C60008367D /* CarListViewController.swift */,
 			);
-			path = ViewControllers;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		69B5A2C2251347B40008367D /* Supports */ = {
@@ -218,6 +221,14 @@
 				69B5A2CF251355280008367D /* CarManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		69B5A2D1251365540008367D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				69B5A2D2251365980008367D /* CarListViewControllerTests.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,7 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69B5A293251345C60008367D /* ViewController.swift in Sources */,
+				69B5A293251345C60008367D /* CarListViewController.swift in Sources */,
 				69B5A28F251345C60008367D /* AppDelegate.swift in Sources */,
 				69B5A2C925134B320008367D /* Car.swift in Sources */,
 				69B5A291251345C60008367D /* SceneDelegate.swift in Sources */,
@@ -365,6 +376,7 @@
 			files = (
 				69B5A2C725134B120008367D /* CarTests.swift in Sources */,
 				69B5A2A6251345D00008367D /* AutomotiveHandbookTests.swift in Sources */,
+				69B5A2D3251365980008367D /* CarListViewControllerTests.swift in Sources */,
 				69B5A2CD251355090008367D /* CarManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

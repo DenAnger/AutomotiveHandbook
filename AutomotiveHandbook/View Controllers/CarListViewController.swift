@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CarListViewController.swift
 //  AutomotiveHandbook
 //
 //  Created by Denis Abramov on 17.09.2020.
@@ -8,5 +8,6 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CarListViewController: UIViewController {
+    @IBOutlet var tableView: UITableView!
 }
