@@ -11,28 +11,27 @@ import XCTest
 
 class CarListDataSourceTests: XCTestCase {
 
+    var dataSource: CarListDataSource!
+    var tableView: UITableView!
+    
     override func setUpWithError() throws {
+        dataSource = CarListDataSource()
+        dataSource.carManager = CarManager()
+        tableView = UITableView()
+        tableView.dataSource = dataSource
     }
 
     override func tearDownWithError() throws {
+        dataSource = nil
+        tableView = nil
     }
     
     func testHasOneSection() {
-        let dataSource = CarListDataSource()
-        let tableView = UITableView()
-        tableView.dataSource = dataSource
-        
         let numberOfSection = tableView.numberOfSections
         XCTAssertEqual(numberOfSection, 1)
     }
     
     func testNumberOfRowEqualsCarListCount() {
-        let dataSource = CarListDataSource()
-        dataSource.carManager = CarManager()
-        
-        let tableView = UITableView()
-        tableView.dataSource = dataSource
-        
         dataSource.carManager?.add(car: Car(yearOfIssue: "Foo",
                                             manufacture: "Bar",
                                             model: "Baz",
