@@ -99,13 +99,10 @@
 		69B5A28D251345C60008367D /* AutomotiveHandbook */ = {
 			isa = PBXGroup;
 			children = (
-				69B5A28E251345C60008367D /* AppDelegate.swift */,
-				69B5A290251345C60008367D /* SceneDelegate.swift */,
-				69B5A292251345C60008367D /* ViewController.swift */,
-				69B5A294251345C60008367D /* Main.storyboard */,
-				69B5A297251345D00008367D /* Assets.xcassets */,
-				69B5A299251345D00008367D /* LaunchScreen.storyboard */,
-				69B5A29C251345D00008367D /* Info.plist */,
+				69B5A2C1251346A10008367D /* ViewControllers */,
+				69B5A2BF251346860008367D /* Storyboards */,
+				69B5A2C0251346960008367D /* Resources */,
+				69B5A2BE2513464E0008367D /* Supports */,
 			);
 			path = AutomotiveHandbook;
 			sourceTree = "<group>";
@@ -113,8 +110,7 @@
 		69B5A2A4251345D00008367D /* AutomotiveHandbookTests */ = {
 			isa = PBXGroup;
 			children = (
-				69B5A2A5251345D00008367D /* AutomotiveHandbookTests.swift */,
-				69B5A2A7251345D00008367D /* Info.plist */,
+				69B5A2C2251347B40008367D /* Supports */,
 			);
 			path = AutomotiveHandbookTests;
 			sourceTree = "<group>";
@@ -122,10 +118,62 @@
 		69B5A2AF251345D00008367D /* AutomotiveHandbookUITests */ = {
 			isa = PBXGroup;
 			children = (
+				69B5A2C3251347CC0008367D /* Supports */,
+			);
+			path = AutomotiveHandbookUITests;
+			sourceTree = "<group>";
+		};
+		69B5A2BE2513464E0008367D /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				69B5A28E251345C60008367D /* AppDelegate.swift */,
+				69B5A290251345C60008367D /* SceneDelegate.swift */,
+				69B5A29C251345D00008367D /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		69B5A2BF251346860008367D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				69B5A294251345C60008367D /* Main.storyboard */,
+				69B5A299251345D00008367D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		69B5A2C0251346960008367D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				69B5A297251345D00008367D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		69B5A2C1251346A10008367D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				69B5A292251345C60008367D /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		69B5A2C2251347B40008367D /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				69B5A2A5251345D00008367D /* AutomotiveHandbookTests.swift */,
+				69B5A2A7251345D00008367D /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		69B5A2C3251347CC0008367D /* Supports */ = {
+			isa = PBXGroup;
+			children = (
 				69B5A2B0251345D00008367D /* AutomotiveHandbookUITests.swift */,
 				69B5A2B2251345D00008367D /* Info.plist */,
 			);
-			path = AutomotiveHandbookUITests;
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = AutomotiveHandbook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AutomotiveHandbook/Supports/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = AutomotiveHandbook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AutomotiveHandbook/Supports/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,7 +521,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = AutomotiveHandbookTests/Info.plist;
+				INFOPLIST_FILE = AutomotiveHandbookTests/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,7 +543,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = AutomotiveHandbookTests/Info.plist;
+				INFOPLIST_FILE = AutomotiveHandbookTests/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +564,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = AutomotiveHandbookUITests/Info.plist;
+				INFOPLIST_FILE = AutomotiveHandbookUITests/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,7 +584,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = AutomotiveHandbookUITests/Info.plist;
+				INFOPLIST_FILE = AutomotiveHandbookUITests/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
