@@ -21,6 +21,7 @@
 		69B5A2D0251355280008367D /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2CF251355280008367D /* CarManager.swift */; };
 		69B5A2D3251365980008367D /* CarListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2D2251365980008367D /* CarListViewControllerTests.swift */; };
 		69B5A2D5251367E50008367D /* CarListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A2D4251367E50008367D /* CarListDataSource.swift */; };
+		69E847342513BE6800CE5940 /* CarListDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E847332513BE6800CE5940 /* CarListDataSourceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		69B5A2CF251355280008367D /* CarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
 		69B5A2D2251365980008367D /* CarListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewControllerTests.swift; sourceTree = "<group>"; };
 		69B5A2D4251367E50008367D /* CarListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListDataSource.swift; sourceTree = "<group>"; };
+		69E847332513BE6800CE5940 /* CarListDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListDataSourceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				69B5A2CC251355090008367D /* CarManagerTests.swift */,
+				69E847332513BE6800CE5940 /* CarListDataSourceTests.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				69B5A2A6251345D00008367D /* AutomotiveHandbookTests.swift in Sources */,
 				69B5A2D3251365980008367D /* CarListViewControllerTests.swift in Sources */,
 				69B5A2CD251355090008367D /* CarManagerTests.swift in Sources */,
+				69E847342513BE6800CE5940 /* CarListDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
