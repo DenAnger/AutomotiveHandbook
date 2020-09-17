@@ -10,6 +10,11 @@ import XCTest
 @testable import AutomotiveHandbook
 
 class CarTests: XCTestCase {
+    
+    let car = Car(yearOfIssue: "Foo",
+                  manufacture: "Bar",
+                  model: "Baz",
+                  bodyType: "Bat")
 
     override func setUpWithError() throws {
     }
@@ -18,12 +23,10 @@ class CarTests: XCTestCase {
     }
     
     func testInitCarWithParameters() {
-        let car = Car(yearOfIssue: "Foo", manufacture: "Bar", model: "Baz", bodyType: "Bat")
         XCTAssertNotNil(car)
     }
     
     func testWhenGivenCarParameters() {
-        let car = Car(yearOfIssue: "Foo", manufacture: "Bar", model: "Baz", bodyType: "Bat")
         XCTAssertEqual(car.yearOfIssue, "Foo")
         XCTAssertEqual(car.manufacture, "Bar")
         XCTAssertEqual(car.model, "Baz")

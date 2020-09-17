@@ -14,7 +14,10 @@ struct Car {
     var model: String
     var bodyType: String
     
-    init(yearOfIssue: String, manufacture: String, model: String, bodyType: String) {
+    init(yearOfIssue: String,
+         manufacture: String,
+         model: String,
+         bodyType: String) {
         self.yearOfIssue = yearOfIssue
         self.manufacture = manufacture
         self.model = model
