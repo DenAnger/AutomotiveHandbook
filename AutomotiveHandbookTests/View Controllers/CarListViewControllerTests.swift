@@ -10,24 +10,26 @@ import XCTest
 @testable import AutomotiveHandbook
 
 class CarListViewControllerTests: XCTestCase {
-
+    
+    var sut: CarListViewController!
+    
     override func setUpWithError() throws {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        sut = storyboard.instantiateViewController(
+            identifier: "CarListViewController"
+            ) as? CarListViewController
+        sut.loadViewIfNeeded()
     }
 
     override func tearDownWithError() throws {
+        sut = nil
     }
     
     func testWhenViewIsLoadedTableViewIsNotNil() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(identifier: "CarListViewController") as! CarListViewController
-        sut.loadViewIfNeeded()
         XCTAssertNotNil(sut.tableView)
     }
     
     func testWhenViewIsLoadedCarListDataSourceIsNotNil() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(identifier: "CarListViewController") as! CarListViewController
-        sut.loadViewIfNeeded()
         XCTAssertNotNil(sut.dataSource)
     }
 }
