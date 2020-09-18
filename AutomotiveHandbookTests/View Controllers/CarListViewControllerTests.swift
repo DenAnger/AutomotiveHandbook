@@ -89,12 +89,41 @@ class CarListViewControllerTests: XCTestCase {
     func testSelectedCellHasShownDetailViewController() {
         let mockNavigationController = MockNavigationController(rootViewController: sut)
         UIApplication.shared.windows.first?.rootViewController = mockNavigationController
+        
+        sut.loadViewIfNeeded()
+        
+        let carOne = Car(yearOfIssue: "Foo",
+                         manufacturer: "Bar",
+                         model: "Baz",
+                         bodyType: "Bat")
+        let carTwo = Car(yearOfIssue: "Bat",
+                         manufacturer: "Baz",
+                         model: "Bar",
+                         bodyType: "Foo")
+        
+        sut.dataSource.carManager?.add(car: carOne)
+        sut.dataSource.carManager?.add(car: carTwo)
+        
+        NotificationCenter.default.post(
+            name: NSNotification.Name(rawValue: "DidSelectRow notification"),
+            object: self,
+            userInfo: ["car": carTwo]
+        )
+        
+        guard let detailViewController = mockNavigationController.pushedViewController as? DetailViewController
+            else {
+                XCTFail()
+                return
+        }
+        detailViewController.loadViewIfNeeded()
+        XCTAssertNotNil(detailViewController.yearOfIssueLabel)
+        XCTAssertTrue(detailViewController.car == carTwo)
     }
     
     func presentingNewCarViewController() -> NewCarViewController {
         guard
-        let addNewCarButton = sut.navigationItem.rightBarButtonItem,
-        let action = addNewCarButton.action
+            let addNewCarButton = sut.navigationItem.rightBarButtonItem,
+            let action = addNewCarButton.action
             else {
                 return NewCarViewController()
         }

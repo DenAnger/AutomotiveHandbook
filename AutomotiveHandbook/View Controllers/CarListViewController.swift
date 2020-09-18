@@ -19,6 +19,13 @@ class CarListViewController: UIViewController {
         
         let carManager = CarManager()
         dataSource.carManager = carManager
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(showDetail(withNotification:)),
+            name: NSNotification.Name(rawValue: "DidSelectRow notification"),
+            object: nil
+        )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,5 +41,20 @@ class CarListViewController: UIViewController {
             newCarViewController.carManager = dataSource.carManager
             present(newCarViewController, animated: true)
         }
+    }
+    
+    @objc func showDetail(withNotification notification: Notification) {
+        guard
+            let userInfo = notification.userInfo,
+            let car = userInfo["car"] as? Car,
+            let detailViewController = storyboard?.instantiateViewController(
+                identifier: "DetailViewController"
+                ) as? DetailViewController else {
+                fatalError()
+        }
+        
+        detailViewController.car = car
+        navigationController?.pushViewController(detailViewController,
+                                                 animated: true)
     }
 }
