@@ -58,42 +58,26 @@ class DetailViewControllerTests: XCTestCase {
     }
     
     func testSetValueToYearOfIssueLabel() {
-        let car = Car(yearOfIssue: "Foo",
-                      manufacture: "Bar",
-                      model: "Baz",
-                      bodyType: "Bat")
-        sut.car = car
-        
-        sut.beginAppearanceTransition(true, animated: true)
-        sut.endAppearanceTransition()
+        setupCarAndAppearanceTransition()
         XCTAssertEqual(sut.yearOfIssueLabel.text, "Foo")
     }
     
     func testSetValueToManufactureLabel() {
-        let car = Car(yearOfIssue: "Foo",
-                      manufacture: "Bar",
-                      model: "Baz",
-                      bodyType: "Bat")
-        sut.car = car
-        
-        sut.beginAppearanceTransition(true, animated: true)
-        sut.endAppearanceTransition()
+        setupCarAndAppearanceTransition()
         XCTAssertEqual(sut.manufactureLabel.text, "Bar")
     }
     
     func testSetValueToModelLabel() {
-        let car = Car(yearOfIssue: "Foo",
-                      manufacture: "Bar",
-                      model: "Baz",
-                      bodyType: "Bat")
-        sut.car = car
-        
-        sut.beginAppearanceTransition(true, animated: true)
-        sut.endAppearanceTransition()
+        setupCarAndAppearanceTransition()
         XCTAssertEqual(sut.modelLabel.text, "Baz")
     }
     
     func testSetValueToBodyTypeLabel() {
+        setupCarAndAppearanceTransition()
+        XCTAssertEqual(sut.bodyTypeLabel.text, "Bat")
+    }
+    
+    func setupCarAndAppearanceTransition() {
         let car = Car(yearOfIssue: "Foo",
                       manufacture: "Bar",
                       model: "Baz",
@@ -102,6 +86,5 @@ class DetailViewControllerTests: XCTestCase {
         
         sut.beginAppearanceTransition(true, animated: true)
         sut.endAppearanceTransition()
-        XCTAssertEqual(sut.bodyTypeLabel.text, "Bat")
     }
 }
