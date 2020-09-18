@@ -14,4 +14,6 @@ class NewCarViewController: UIViewController {
     @IBOutlet var manufacturerTextField: UITextField!
     @IBOutlet var modelTextField: UITextField!
     @IBOutlet var bodyTypeTextField: UITextField!
+    @IBOutlet var saveButton: UIButton!
+    @IBOutlet var cancelButton: UIButton!
 }

@@ -40,4 +40,12 @@ class NewCarViewControllerTests: XCTestCase {
     func testHasBodyTypeTextField() {
         XCTAssertTrue(sut.bodyTypeTextField.isDescendant(of: sut.view))
     }
+    
+    func testHasSaveButton() {
+        XCTAssertTrue(sut.saveButton.isDescendant(of: sut.view))
+    }
+    
+    func testHasCancelButton() {
+        XCTAssertTrue(sut.cancelButton.isDescendant(of: sut.view))
+    }
 }

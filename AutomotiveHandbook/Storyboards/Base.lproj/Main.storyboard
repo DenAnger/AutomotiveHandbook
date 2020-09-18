@@ -154,13 +154,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpz-KT-J3b">
+                                <rect key="frame" x="190" y="440" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTy-aq-zHm">
+                                <rect key="frame" x="183" y="500" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="LyZ-mp-VXD" firstAttribute="top" secondItem="0fl-TX-WMI" secondAttribute="bottom" constant="50" id="2MG-4D-SgO"/>
+                            <constraint firstItem="DTy-aq-zHm" firstAttribute="top" secondItem="qpz-KT-J3b" secondAttribute="bottom" constant="30" id="2Ub-BN-gOh"/>
+                            <constraint firstItem="DTy-aq-zHm" firstAttribute="centerX" secondItem="T4Y-yg-wkE" secondAttribute="centerX" id="44r-vg-9Nb"/>
+                            <constraint firstItem="qpz-KT-J3b" firstAttribute="top" secondItem="LyZ-mp-VXD" secondAttribute="bottom" constant="30" id="ERs-mF-FeZ"/>
                             <constraint firstItem="q78-qp-pPO" firstAttribute="leading" secondItem="T4Y-yg-wkE" secondAttribute="leading" constant="20" id="HTg-OL-ZJe"/>
                             <constraint firstItem="H5g-Gb-Yic" firstAttribute="leading" secondItem="T4Y-yg-wkE" secondAttribute="leading" constant="20" id="Q4t-cq-ZmQ"/>
                             <constraint firstItem="LyZ-mp-VXD" firstAttribute="leading" secondItem="T4Y-yg-wkE" secondAttribute="leading" constant="20" id="Qtk-cG-enG"/>
+                            <constraint firstItem="qpz-KT-J3b" firstAttribute="centerX" secondItem="T4Y-yg-wkE" secondAttribute="centerX" id="RZk-K4-hwV"/>
                             <constraint firstItem="0fl-TX-WMI" firstAttribute="leading" secondItem="T4Y-yg-wkE" secondAttribute="leading" constant="20" id="Vcm-Hq-hp4"/>
                             <constraint firstItem="q78-qp-pPO" firstAttribute="top" secondItem="T4Y-yg-wkE" secondAttribute="top" constant="80" id="f0M-cT-RUg"/>
                             <constraint firstItem="T4Y-yg-wkE" firstAttribute="trailing" secondItem="H5g-Gb-Yic" secondAttribute="trailing" constant="20" id="h6x-B9-gIf"/>
@@ -174,14 +186,16 @@
                     </view>
                     <connections>
                         <outlet property="bodyTypeTextField" destination="LyZ-mp-VXD" id="sNG-Xw-s9m"/>
+                        <outlet property="cancelButton" destination="DTy-aq-zHm" id="why-Ue-gSr"/>
                         <outlet property="manufacturerTextField" destination="H5g-Gb-Yic" id="4c1-zF-zF4"/>
                         <outlet property="modelTextField" destination="0fl-TX-WMI" id="WjY-dS-6Oy"/>
+                        <outlet property="saveButton" destination="qpz-KT-J3b" id="4Qg-Ru-kQB"/>
                         <outlet property="yearOfIssueTextField" destination="q78-qp-pPO" id="z7y-X7-VFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdU-kx-26R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661" y="117"/>
+            <point key="canvasLocation" x="1660.8695652173915" y="116.51785714285714"/>
         </scene>
     </scenes>
 </document>
