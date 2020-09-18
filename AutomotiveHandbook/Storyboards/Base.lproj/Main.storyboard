@@ -65,5 +65,20 @@
             </objects>
             <point key="canvasLocation" x="139" y="117"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="i6v-ks-jRz">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="eSB-aH-Xpj" customClass="DetailViewController" customModule="AutomotiveHandbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="snT-6W-H4r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9DP-jt-h19"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGj-dH-qeE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="117"/>
+        </scene>
     </scenes>
 </document>
