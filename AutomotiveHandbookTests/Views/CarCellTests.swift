@@ -10,14 +10,10 @@ import XCTest
 @testable import AutomotiveHandbook
 
 class CarCellTests: XCTestCase {
+    
+    var cell: CarCell!
 
     override func setUpWithError() throws {
-    }
-
-    override func tearDownWithError() throws {
-    }
-
-    func testCellHasModelLabel() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let sut = storyboard.instantiateViewController(
             identifier: "CarListViewController"
@@ -28,26 +24,20 @@ class CarCellTests: XCTestCase {
         let dataSource = MockTableViewDataSource()
         tableView?.dataSource = dataSource
         
-        let cell = tableView?.dequeueReusableCell(
+        cell = tableView?.dequeueReusableCell(
             withIdentifier: "cell", for: IndexPath(row: 0, section: 0)
-            ) as! CarCell
+            ) as? CarCell
+    }
+
+    override func tearDownWithError() throws {
+        cell = nil
+    }
+
+    func testCellHasModelLabel() {
         XCTAssertNotNil(cell.modelLabel)
     }
     
     func testCellHasModelNameLabelInContentView() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(
-            identifier: "CarListViewController"
-            ) as! CarListViewController
-        sut.loadViewIfNeeded()
-        
-        let tableView = sut.tableView
-        let dataSource = MockTableViewDataSource()
-        tableView?.dataSource = dataSource
-        
-        let cell = tableView?.dequeueReusableCell(
-            withIdentifier: "cell", for: IndexPath(row: 0, section: 0)
-            ) as! CarCell
         XCTAssertTrue(cell.modelLabel.isDescendant(of: cell.contentView))
     }
 }
