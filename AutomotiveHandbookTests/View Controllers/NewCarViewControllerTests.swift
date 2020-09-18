@@ -68,10 +68,39 @@ class NewCarViewControllerTests: XCTestCase {
     
     func testSaveButtonHasSaveMethod() {
         let saveButton = sut.saveButton
-        guard let actions = saveButton?.actions(forTarget: sut, forControlEvent: .touchUpInside) else {
+        guard let actions = saveButton?.actions(forTarget: sut,
+                                                forControlEvent: .touchUpInside)
+            else {
             XCTFail()
             return
         }
         XCTAssertTrue(actions.contains("saveButtonPressed"))
+    }
+    
+    func testSaveDismissesNewCarViewController() {
+        let mockNewCarViewController = MockNewCarViewController()
+        mockNewCarViewController.yearOfIssueTextField = UITextField()
+        mockNewCarViewController.yearOfIssueTextField.text = "Foo"
+        mockNewCarViewController.manufacturerTextField = UITextField()
+        mockNewCarViewController.manufacturerTextField.text = "Bar"
+        mockNewCarViewController.modelTextField = UITextField()
+        mockNewCarViewController.modelTextField.text = "Baz"
+        mockNewCarViewController.bodyTypeTextField = UITextField()
+        mockNewCarViewController.bodyTypeTextField.text = "Bat"
+        
+        mockNewCarViewController.carManager = CarManager()
+        mockNewCarViewController.saveButtonPressed()
+        XCTAssertTrue(mockNewCarViewController.isDismiss)
+    }
+}
+
+extension NewCarViewControllerTests {
+    class MockNewCarViewController: NewCarViewController {
+        var isDismiss = false
+        
+        override func dismiss(animated flag: Bool,
+                              completion: (() -> Void)? = nil) {
+            isDismiss = true
+        }
     }
 }

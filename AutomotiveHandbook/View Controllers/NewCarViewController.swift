@@ -30,6 +30,7 @@ class NewCarViewController: UIViewController {
                       model: model ?? "",
                       bodyType: bodyType ?? "")
         carManager.add(car: car)
+        dismiss(animated: true)
     }
     
     @IBAction func cancelButtonPressed() {
