@@ -10,8 +10,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var yearOfIssueLabel = UILabel()
-    var manufactureLabel = UILabel()
-    var modelLabel = UILabel()
-    var bodyTypeLabel = UILabel()
+    @IBOutlet var yearOfIssueLabel: UILabel!
+    @IBOutlet var manufactureLabel: UILabel!
+    @IBOutlet var modelLabel: UILabel!
+    @IBOutlet var bodyTypeLabel: UILabel!
 }

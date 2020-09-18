@@ -15,7 +15,9 @@ class DetailViewControllerTests: XCTestCase {
 
     override func setUpWithError() throws {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        sut = storyboard.instantiateViewController(identifier: "DetailViewController") as? DetailViewController
+        sut = storyboard.instantiateViewController(
+            identifier: "DetailViewController"
+            ) as? DetailViewController
         sut.loadViewIfNeeded()
     }
 
@@ -37,5 +39,21 @@ class DetailViewControllerTests: XCTestCase {
     
     func testHasBodyTypeLabel() {
         XCTAssertNotNil(sut.bodyTypeLabel)
+    }
+    
+    func testHasYearOfIssueLabelInView() {
+        XCTAssertTrue(sut.yearOfIssueLabel.isDescendant(of: sut.view))
+    }
+    
+    func testHasManufactureLabelInView() {
+        XCTAssertTrue(sut.manufactureLabel.isDescendant(of: sut.view))
+    }
+    
+    func testHasModelLabelInView() {
+        XCTAssertTrue(sut.modelLabel.isDescendant(of: sut.view))
+    }
+    
+    func testHasBodyTypeLabelInView() {
+        XCTAssertTrue(sut.bodyTypeLabel.isDescendant(of: sut.view))
     }
 }

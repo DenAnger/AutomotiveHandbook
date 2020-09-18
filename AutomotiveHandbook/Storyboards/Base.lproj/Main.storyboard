@@ -72,9 +72,55 @@
                     <view key="view" contentMode="scaleToFill" id="snT-6W-H4r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCf-DZ-ZbD">
+                                <rect key="frame" x="20" y="124" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUn-bH-6Su">
+                                <rect key="frame" x="20" y="195" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAE-Co-vu8">
+                                <rect key="frame" x="20" y="266" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaL-Nh-EBq">
+                                <rect key="frame" x="20" y="337" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lUn-bH-6Su" firstAttribute="leading" secondItem="9DP-jt-h19" secondAttribute="leading" constant="20" id="1Ki-LO-8ya"/>
+                            <constraint firstItem="qaL-Nh-EBq" firstAttribute="top" secondItem="IAE-Co-vu8" secondAttribute="bottom" constant="50" id="9Ji-3J-kKg"/>
+                            <constraint firstItem="lUn-bH-6Su" firstAttribute="top" secondItem="DCf-DZ-ZbD" secondAttribute="bottom" constant="50" id="9Lh-Ty-pcZ"/>
+                            <constraint firstItem="qaL-Nh-EBq" firstAttribute="leading" secondItem="9DP-jt-h19" secondAttribute="leading" constant="20" id="CYa-xb-BfC"/>
+                            <constraint firstItem="IAE-Co-vu8" firstAttribute="top" secondItem="lUn-bH-6Su" secondAttribute="bottom" constant="50" id="EnH-it-lEH"/>
+                            <constraint firstItem="DCf-DZ-ZbD" firstAttribute="leading" secondItem="9DP-jt-h19" secondAttribute="leading" constant="20" id="P60-mW-rOI"/>
+                            <constraint firstItem="9DP-jt-h19" firstAttribute="trailing" secondItem="lUn-bH-6Su" secondAttribute="trailing" constant="20" id="Wkg-ET-dFC"/>
+                            <constraint firstItem="9DP-jt-h19" firstAttribute="trailing" secondItem="DCf-DZ-ZbD" secondAttribute="trailing" constant="20" id="fCx-Pu-MU5"/>
+                            <constraint firstItem="IAE-Co-vu8" firstAttribute="leading" secondItem="9DP-jt-h19" secondAttribute="leading" constant="20" id="fZT-fp-Rsa"/>
+                            <constraint firstItem="DCf-DZ-ZbD" firstAttribute="top" secondItem="9DP-jt-h19" secondAttribute="top" constant="80" id="iFG-cv-XQG"/>
+                            <constraint firstItem="9DP-jt-h19" firstAttribute="trailing" secondItem="qaL-Nh-EBq" secondAttribute="trailing" constant="20" id="iHO-ZF-ozb"/>
+                            <constraint firstItem="9DP-jt-h19" firstAttribute="trailing" secondItem="IAE-Co-vu8" secondAttribute="trailing" constant="20" id="tYR-CV-5gQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9DP-jt-h19"/>
                     </view>
+                    <connections>
+                        <outlet property="bodyTypeLabel" destination="qaL-Nh-EBq" id="8yf-Hc-3w2"/>
+                        <outlet property="manufactureLabel" destination="lUn-bH-6Su" id="sEv-ed-umT"/>
+                        <outlet property="modelLabel" destination="IAE-Co-vu8" id="DJP-hR-Ktn"/>
+                        <outlet property="yearOfIssueLabel" destination="DCf-DZ-ZbD" id="DnA-1k-hZc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGj-dH-qeE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
