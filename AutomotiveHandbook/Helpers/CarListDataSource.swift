@@ -30,3 +30,17 @@ extension CarListDataSource: UITableViewDataSource {
         return cell
     }
 }
+
+extension CarListDataSource: UITableViewDelegate {
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        guard let car = carManager?.car(at: indexPath.row) else {
+            return
+        }
+        NotificationCenter.default.post(
+            name: NSNotification.Name("DidSelectRow notification"),
+            object: self,
+            userInfo: ["car": car]
+        )
+    }
+}
