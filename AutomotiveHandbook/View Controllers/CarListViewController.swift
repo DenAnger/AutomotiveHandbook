@@ -16,4 +16,8 @@ class CarListViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = dataSource
     }
+    
+    
+    @IBAction func addNewCar(_ sender: UIBarButtonItem) {
+    }
 }

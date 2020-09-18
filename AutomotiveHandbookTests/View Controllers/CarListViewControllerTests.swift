@@ -36,4 +36,9 @@ class CarListViewControllerTests: XCTestCase {
     func testWhenViewIsLoadedTableViewDataSourceIsSet() {
         XCTAssertTrue(sut.tableView.dataSource is CarListDataSource)
     }
+    
+    func testHasAddNewContactButton() {
+        let target = sut.navigationItem.rightBarButtonItem?.target
+        XCTAssertEqual(target as? CarListViewController, sut)
+    }
 }

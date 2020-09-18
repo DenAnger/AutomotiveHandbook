@@ -55,7 +55,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FW3-XL-ZLv"/>
+                    <navigationItem key="navigationItem" id="FW3-XL-ZLv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kkq-zH-bp0">
+                            <connections>
+                                <action selector="addNewCar:" destination="BYZ-38-t0r" id="gdv-uh-afr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dataSource" destination="kOI-kP-9K2" id="8qd-Gb-ZHQ"/>
                         <outlet property="tableView" destination="BWE-Mc-QkJ" id="u91-r9-GZ3"/>
