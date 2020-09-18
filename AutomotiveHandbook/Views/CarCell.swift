@@ -13,6 +13,6 @@ class CarCell: UITableViewCell {
     @IBOutlet var modelLabel: UILabel!
     
     func configure(with car: Car) {
-        
+        modelLabel.text = car.model
     }
 }

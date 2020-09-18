@@ -40,6 +40,12 @@ class CarCellTests: XCTestCase {
     func testCellHasModelNameLabelInContentView() {
         XCTAssertTrue(cell.modelLabel.isDescendant(of: cell.contentView))
     }
+    
+    func testConfigureSetsModel() {
+        let car = Car(yearOfIssue: "Foo", manufacture: "Bar", model: "Baz", bodyType: "Bat")
+        cell.configure(with: car)
+        XCTAssertEqual(cell.modelLabel.text, car.model)
+    }
 }
 
 extension CarCellTests {
