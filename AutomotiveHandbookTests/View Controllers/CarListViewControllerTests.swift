@@ -86,6 +86,11 @@ class CarListViewControllerTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
     
+    func testSelectedCellHasShownDetailViewController() {
+        let mockNavigationController = MockNavigationController(rootViewController: sut)
+        UIApplication.shared.windows.first?.rootViewController = mockNavigationController
+    }
+    
     func presentingNewCarViewController() -> NewCarViewController {
         guard
         let addNewCarButton = sut.navigationItem.rightBarButtonItem,
@@ -108,6 +113,15 @@ extension CarListViewControllerTests {
         var isReloaded = false
         override func reloadData() {
             isReloaded = true
+        }
+    }
+    
+    class MockNavigationController: UINavigationController {
+        var pushedViewController: UIViewController?
+        
+        override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+            pushedViewController = viewController
+            super.pushViewController(viewController, animated: animated)
         }
     }
 }
