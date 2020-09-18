@@ -20,6 +20,11 @@ class CarListViewController: UIViewController {
         dataSource.carManager = carManager
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     
     @IBAction func addNewCar(_ sender: UIBarButtonItem) {
         

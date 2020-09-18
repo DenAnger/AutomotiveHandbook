@@ -53,6 +53,15 @@ class CarListViewControllerTests: XCTestCase {
         XCTAssertTrue(newCarViewController.carManager === sut.dataSource.carManager)
     }
     
+    func testWhenViewAppearedTableViewReloaded() {
+        let mockTableView = MockTableView()
+        sut.tableView = mockTableView
+        
+        sut.beginAppearanceTransition(true, animated: true)
+        sut.endAppearanceTransition()
+        XCTAssertTrue((sut.tableView as! MockTableView).isReloaded)
+    }
+    
     func presentingNewCarViewController() -> NewCarViewController {
         guard
         let addNewCarButton = sut.navigationItem.rightBarButtonItem,
@@ -67,5 +76,14 @@ class CarListViewControllerTests: XCTestCase {
                             waitUntilDone: true)
         let newCarViewController = sut.presentedViewController as! NewCarViewController
         return newCarViewController
+    }
+}
+
+extension CarListViewControllerTests {
+    class MockTableView: UITableView {
+        var isReloaded = false
+        override func reloadData() {
+            isReloaded = true
+        }
     }
 }
