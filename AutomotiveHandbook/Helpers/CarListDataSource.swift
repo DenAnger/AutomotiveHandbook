@@ -21,6 +21,9 @@ extension CarListDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return CarCell()
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "cell", for: indexPath
+            ) as! CarCell
+        return cell
     }
 }

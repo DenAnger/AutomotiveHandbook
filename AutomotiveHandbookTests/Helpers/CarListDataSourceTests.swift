@@ -13,17 +13,26 @@ class CarListDataSourceTests: XCTestCase {
 
     var dataSource: CarListDataSource!
     var tableView: UITableView!
+    var carListViewController: CarListViewController!
     
     override func setUpWithError() throws {
         dataSource = CarListDataSource()
         dataSource.carManager = CarManager()
-        tableView = UITableView()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        carListViewController = storyboard.instantiateViewController(
+            identifier: "CarListViewController"
+            ) as? CarListViewController
+        carListViewController.loadViewIfNeeded()
+        
+        tableView = carListViewController.tableView
         tableView.dataSource = dataSource
     }
 
     override func tearDownWithError() throws {
         dataSource = nil
         tableView = nil
+        carListViewController = nil
     }
     
     func testHasOneSection() {
@@ -55,5 +64,35 @@ class CarListDataSourceTests: XCTestCase {
         
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
         XCTAssertTrue(cell is CarCell)
+    }
+    
+    func testCellForRowDequeuesCellFromTableView() {
+        let mockTableView = MockTableView()
+        mockTableView.dataSource = dataSource
+        mockTableView.register(CarCell.self, forCellReuseIdentifier: "cell")
+        
+        dataSource.carManager?.add(car: Car(yearOfIssue: "Foo",
+                                            manufacture: "Bar",
+                                            model: "Baz",
+                                            bodyType: "Bat"))
+        mockTableView.reloadData()
+        
+        _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssert(mockTableView.cellIsDequeued)
+    }
+}
+
+extension CarListDataSourceTests {
+    class MockTableView: UITableView {
+        var cellIsDequeued = false
+        
+        override func dequeueReusableCell(
+            withIdentifier identifier: String,
+            for indexPath: IndexPath
+        ) -> UITableViewCell {
+            cellIsDequeued = true
+            return super.dequeueReusableCell(withIdentifier: identifier,
+                                             for: indexPath)
+        }
     }
 }
