@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		693FB089251469B8006C33C2 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FB088251469B8006C33C2 /* CarCell.swift */; };
+		693FB08B25147E39006C33C2 /* CarCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FB08A25147E39006C33C2 /* CarCellTests.swift */; };
 		69B5A28F251345C60008367D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A28E251345C60008367D /* AppDelegate.swift */; };
 		69B5A291251345C60008367D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A290251345C60008367D /* SceneDelegate.swift */; };
 		69B5A293251345C60008367D /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A292251345C60008367D /* CarListViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		693FB088251469B8006C33C2 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		693FB08A25147E39006C33C2 /* CarCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCellTests.swift; sourceTree = "<group>"; };
 		69B5A28B251345C60008367D /* AutomotiveHandbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomotiveHandbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B5A28E251345C60008367D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69B5A290251345C60008367D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		693FB0872514697C006C33C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				693FB08A25147E39006C33C2 /* CarCellTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693FB08B25147E39006C33C2 /* CarCellTests.swift in Sources */,
 				69B5A2C725134B120008367D /* CarTests.swift in Sources */,
 				69B5A2A6251345D00008367D /* AutomotiveHandbookTests.swift in Sources */,
 				69B5A2D3251365980008367D /* CarListViewControllerTests.swift in Sources */,
