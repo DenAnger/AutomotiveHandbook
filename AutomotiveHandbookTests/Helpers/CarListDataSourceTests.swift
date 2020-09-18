@@ -80,6 +80,24 @@ class CarListDataSourceTests: XCTestCase {
         _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
         XCTAssert(mockTableView.cellIsDequeued)
     }
+    
+    func testCellForRowCallsConfigureCell() {
+        let mockTableView = MockTableView()
+        mockTableView.dataSource = dataSource
+        mockTableView.register(MockCarCell.self, forCellReuseIdentifier: "cell")
+        
+        let car = Car(yearOfIssue: "Foo",
+                      manufacture: "Bar",
+                      model: "Baz",
+                      bodyType: "Bat")
+        dataSource.carManager?.add(car: car)
+        mockTableView.reloadData()
+        
+        let cell = mockTableView.cellForRow(
+            at: IndexPath(row: 0, section: 0)
+            ) as! MockCarCell
+        XCTAssertEqual(cell.car, car)
+    }
 }
 
 extension CarListDataSourceTests {
@@ -93,6 +111,14 @@ extension CarListDataSourceTests {
             cellIsDequeued = true
             return super.dequeueReusableCell(withIdentifier: identifier,
                                              for: indexPath)
+        }
+    }
+    
+    class MockCarCell: CarCell {
+        var car: Car?
+        
+        override func configure(with car: Car) {
+            self.car = car
         }
     }
 }

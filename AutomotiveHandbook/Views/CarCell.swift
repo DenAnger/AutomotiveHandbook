@@ -10,4 +10,7 @@ import UIKit
 
 class CarCell: UITableViewCell {
     
+    func configure(with car: Car) {
+        
+    }
 }
