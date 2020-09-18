@@ -15,10 +15,17 @@ class CarListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = dataSource
+        
+        let carManager = CarManager()
+        dataSource.carManager = carManager
     }
     
     
     @IBAction func addNewCar(_ sender: UIBarButtonItem) {
-        present(NewCarViewController(), animated: true)
+        
+        if let newCarViewController = storyboard?.instantiateViewController(identifier: "NewCarViewController") as? NewCarViewController {
+            newCarViewController.carManager = dataSource.carManager
+            present(newCarViewController, animated: true)
+        }
     }
 }

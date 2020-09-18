@@ -57,5 +57,29 @@ class CarListViewControllerTests: XCTestCase {
                             waitUntilDone: true)
         XCTAssertNotNil(sut.presentedViewController)
         XCTAssertTrue(sut.presentedViewController is NewCarViewController)
+        
+        let newCarViewController = sut.presentedViewController as! NewCarViewController
+        XCTAssertNotNil(newCarViewController.yearOfIssueTextField)
+    }
+    
+    func testSharesSameCarManagerWithNewCarViewController () {
+        guard
+            let addNewCarButton = sut.navigationItem.rightBarButtonItem,
+            let action = addNewCarButton.action
+            else {
+                XCTFail()
+                return
+        }
+        
+        UIApplication.shared.windows.first?.rootViewController = sut
+        sut.performSelector(onMainThread: action,
+                            with: addNewCarButton,
+                            waitUntilDone: true)
+        XCTAssertNotNil(sut.presentedViewController)
+        XCTAssertTrue(sut.presentedViewController is NewCarViewController)
+        
+        let newCarViewController = sut.presentedViewController as! NewCarViewController
+        XCTAssertNotNil(sut.dataSource.carManager)
+        XCTAssertTrue(newCarViewController.carManager === sut.dataSource.carManager)
     }
 }
