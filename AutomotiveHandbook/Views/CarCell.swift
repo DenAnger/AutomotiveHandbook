@@ -10,7 +10,7 @@ import UIKit
 
 class CarCell: UITableViewCell {
     
-    var yearOfIssueLabel = UILabel()
+    @IBOutlet var modelLabel: UILabel!
     
     func configure(with car: Car) {
         

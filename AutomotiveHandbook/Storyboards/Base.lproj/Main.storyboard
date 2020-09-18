@@ -25,7 +25,23 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qFD-W1-7vv" id="24U-TO-6bd">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13K-9n-tDA">
+                                                    <rect key="frame" x="20" y="11.5" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="13K-9n-tDA" secondAttribute="trailing" id="cp7-JL-cob"/>
+                                                <constraint firstItem="13K-9n-tDA" firstAttribute="leading" secondItem="24U-TO-6bd" secondAttribute="leadingMargin" id="eVS-Ny-3Wd"/>
+                                                <constraint firstItem="13K-9n-tDA" firstAttribute="centerY" secondItem="24U-TO-6bd" secondAttribute="centerY" id="mnz-qG-a3L"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="modelLabel" destination="13K-9n-tDA" id="J20-NP-iTf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

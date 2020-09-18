@@ -17,9 +17,11 @@ class CarCellTests: XCTestCase {
     override func tearDownWithError() throws {
     }
 
-    func testCellHasYearOfIssueLabel() {
+    func testCellHasModelLabel() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(identifier: "CarListViewController") as! CarListViewController
+        let sut = storyboard.instantiateViewController(
+            identifier: "CarListViewController"
+            ) as! CarListViewController
         sut.loadViewIfNeeded()
         
         let tableView = sut.tableView
@@ -29,9 +31,25 @@ class CarCellTests: XCTestCase {
         let cell = tableView?.dequeueReusableCell(
             withIdentifier: "cell", for: IndexPath(row: 0, section: 0)
             ) as! CarCell
-        XCTAssertNotNil(cell.yearOfIssueLabel)
+        XCTAssertNotNil(cell.modelLabel)
     }
     
+    func testCellHasModelNameLabelInContentView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut = storyboard.instantiateViewController(
+            identifier: "CarListViewController"
+            ) as! CarListViewController
+        sut.loadViewIfNeeded()
+        
+        let tableView = sut.tableView
+        let dataSource = MockTableViewDataSource()
+        tableView?.dataSource = dataSource
+        
+        let cell = tableView?.dequeueReusableCell(
+            withIdentifier: "cell", for: IndexPath(row: 0, section: 0)
+            ) as! CarCell
+        XCTAssertTrue(cell.modelLabel.isDescendant(of: cell.contentView))
+    }
 }
 
 extension CarCellTests {
