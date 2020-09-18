@@ -17,7 +17,7 @@ class CarManagerTests: XCTestCase {
     override func setUpWithError() throws {
         carManager = CarManager()
         car = Car(yearOfIssue: "Foo",
-                  manufacture: "Bar",
+                  manufacturer: "Bar",
                   model: "Baz",
                   bodyType: "Bat")
     }
@@ -44,11 +44,11 @@ class CarManagerTests: XCTestCase {
     
     func testAddingSameObjectDoesNotIncrementCount() {
         carManager.add(car: Car(yearOfIssue: "Foo",
-                                manufacture: "Bar",
+                                manufacturer: "Bar",
                                 model: "Baz",
                                 bodyType: "Bat"))
         carManager.add(car: Car(yearOfIssue: "Foo",
-                                manufacture: "Bar",
+                                manufacturer: "Bar",
                                 model: "Baz",
                                 bodyType: "Bat"))
         XCTAssertEqual(carManager.carsCount, 1)

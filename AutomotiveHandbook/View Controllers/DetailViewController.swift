@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     @IBOutlet var yearOfIssueLabel: UILabel!
-    @IBOutlet var manufactureLabel: UILabel!
+    @IBOutlet var manufacturerLabel: UILabel!
     @IBOutlet var modelLabel: UILabel!
     @IBOutlet var bodyTypeLabel: UILabel!
     
@@ -21,7 +21,7 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         yearOfIssueLabel.text = car.yearOfIssue
-        manufactureLabel.text = car.manufacture
+        manufacturerLabel.text = car.manufacturer
         modelLabel.text = car.model
         bodyTypeLabel.text = car.bodyType
     }

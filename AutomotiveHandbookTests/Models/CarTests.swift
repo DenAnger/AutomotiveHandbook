@@ -15,7 +15,7 @@ class CarTests: XCTestCase {
 
     override func setUpWithError() throws {
         car = Car(yearOfIssue: "Foo",
-                      manufacture: "Bar",
+                      manufacturer: "Bar",
                       model: "Baz",
                       bodyType: "Bat")
     }
@@ -30,7 +30,7 @@ class CarTests: XCTestCase {
     
     func testWhenGivenCarParameters() {
         XCTAssertEqual(car.yearOfIssue, "Foo")
-        XCTAssertEqual(car.manufacture, "Bar")
+        XCTAssertEqual(car.manufacturer, "Bar")
         XCTAssertEqual(car.model, "Baz")
         XCTAssertEqual(car.bodyType, "Bat")
     }

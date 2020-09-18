@@ -10,16 +10,16 @@ import Foundation
 
 struct Car: Equatable {
     var yearOfIssue: String
-    var manufacture: String
+    var manufacturer: String
     var model: String
     var bodyType: String
     
     init(yearOfIssue: String,
-         manufacture: String,
+         manufacturer: String,
          model: String,
          bodyType: String) {
         self.yearOfIssue = yearOfIssue
-        self.manufacture = manufacture
+        self.manufacturer = manufacturer
         self.model = model
         self.bodyType = bodyType
     }

@@ -37,13 +37,13 @@ class CarCellTests: XCTestCase {
         XCTAssertNotNil(cell.modelLabel)
     }
     
-    func testCellHasModelNameLabelInContentView() {
+    func testCellHasModelLabelInContentView() {
         XCTAssertTrue(cell.modelLabel.isDescendant(of: cell.contentView))
     }
     
     func testConfigureSetsModel() {
         let car = Car(yearOfIssue: "Foo",
-                      manufacture: "Bar",
+                      manufacturer: "Bar",
                       model: "Baz",
                       bodyType: "Bat")
         cell.configure(with: car)

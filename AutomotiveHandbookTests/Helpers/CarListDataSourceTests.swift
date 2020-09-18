@@ -22,7 +22,7 @@ class CarListDataSourceTests: XCTestCase {
         
         mockTableView = MockTableView.mockTableView(withDataSource: dataSource)
         car = Car(yearOfIssue: "Foo",
-                  manufacture: "Bar",
+                  manufacturer: "Bar",
                   model: "Baz",
                   bodyType: "Bat")
         
@@ -50,7 +50,7 @@ class CarListDataSourceTests: XCTestCase {
         XCTAssertEqual(mockTableView.numberOfRows(inSection: 0), 1)
         
         dataSource.carManager?.add(car: Car(yearOfIssue: "Bat",
-                                            manufacture: "Baz",
+                                            manufacturer: "Baz",
                                             model: "Bar",
                                             bodyType: "Foo"))
         mockTableView.reloadData()

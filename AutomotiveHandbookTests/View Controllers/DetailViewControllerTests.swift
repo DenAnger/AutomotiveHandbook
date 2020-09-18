@@ -29,8 +29,8 @@ class DetailViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.yearOfIssueLabel)
     }
     
-    func testHasManufactureLabel() {
-        XCTAssertNotNil(sut.manufactureLabel)
+    func testHasManufacturerLabel() {
+        XCTAssertNotNil(sut.manufacturerLabel)
     }
     
     func testHasModelLabel() {
@@ -45,8 +45,8 @@ class DetailViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.yearOfIssueLabel.isDescendant(of: sut.view))
     }
     
-    func testHasManufactureLabelInView() {
-        XCTAssertTrue(sut.manufactureLabel.isDescendant(of: sut.view))
+    func testHasManufacturerLabelInView() {
+        XCTAssertTrue(sut.manufacturerLabel.isDescendant(of: sut.view))
     }
     
     func testHasModelLabelInView() {
@@ -62,9 +62,9 @@ class DetailViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.yearOfIssueLabel.text, "Foo")
     }
     
-    func testSetValueToManufactureLabel() {
+    func testSetValueToManufacturerLabel() {
         setupCarAndAppearanceTransition()
-        XCTAssertEqual(sut.manufactureLabel.text, "Bar")
+        XCTAssertEqual(sut.manufacturerLabel.text, "Bar")
     }
     
     func testSetValueToModelLabel() {
@@ -79,7 +79,7 @@ class DetailViewControllerTests: XCTestCase {
     
     func setupCarAndAppearanceTransition() {
         let car = Car(yearOfIssue: "Foo",
-                      manufacture: "Bar",
+                      manufacturer: "Bar",
                       model: "Baz",
                       bodyType: "Bat")
         sut.car = car

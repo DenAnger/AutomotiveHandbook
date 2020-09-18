@@ -11,6 +11,8 @@
 		693FB08B25147E39006C33C2 /* CarCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FB08A25147E39006C33C2 /* CarCellTests.swift */; };
 		693FB08D2514877D006C33C2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FB08C2514877D006C33C2 /* DetailViewController.swift */; };
 		693FB08F251491C6006C33C2 /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FB08E251491C6006C33C2 /* DetailViewControllerTests.swift */; };
+		693FB0912514ADCD006C33C2 /* NewCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FB0902514ADCD006C33C2 /* NewCarViewController.swift */; };
+		693FB0932514AEA4006C33C2 /* NewCarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FB0922514AEA4006C33C2 /* NewCarViewControllerTests.swift */; };
 		69B5A28F251345C60008367D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A28E251345C60008367D /* AppDelegate.swift */; };
 		69B5A291251345C60008367D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A290251345C60008367D /* SceneDelegate.swift */; };
 		69B5A293251345C60008367D /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A292251345C60008367D /* CarListViewController.swift */; };
@@ -50,6 +52,8 @@
 		693FB08A25147E39006C33C2 /* CarCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCellTests.swift; sourceTree = "<group>"; };
 		693FB08C2514877D006C33C2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		693FB08E251491C6006C33C2 /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		693FB0902514ADCD006C33C2 /* NewCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCarViewController.swift; sourceTree = "<group>"; };
+		693FB0922514AEA4006C33C2 /* NewCarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCarViewControllerTests.swift; sourceTree = "<group>"; };
 		69B5A28B251345C60008367D /* AutomotiveHandbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomotiveHandbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B5A28E251345C60008367D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69B5A290251345C60008367D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 			children = (
 				69B5A292251345C60008367D /* CarListViewController.swift */,
 				693FB08C2514877D006C33C2 /* DetailViewController.swift */,
+				693FB0902514ADCD006C33C2 /* NewCarViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			children = (
 				69B5A2D2251365980008367D /* CarListViewControllerTests.swift */,
 				693FB08E251491C6006C33C2 /* DetailViewControllerTests.swift */,
+				693FB0922514AEA4006C33C2 /* NewCarViewControllerTests.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				69B5A293251345C60008367D /* CarListViewController.swift in Sources */,
 				69B5A2D5251367E50008367D /* CarListDataSource.swift in Sources */,
 				69B5A28F251345C60008367D /* AppDelegate.swift in Sources */,
+				693FB0912514ADCD006C33C2 /* NewCarViewController.swift in Sources */,
 				69B5A2C925134B320008367D /* Car.swift in Sources */,
 				69B5A291251345C60008367D /* SceneDelegate.swift in Sources */,
 				693FB089251469B8006C33C2 /* CarCell.swift in Sources */,
@@ -415,6 +422,7 @@
 				69B5A2C725134B120008367D /* CarTests.swift in Sources */,
 				69B5A2A6251345D00008367D /* AutomotiveHandbookTests.swift in Sources */,
 				69B5A2D3251365980008367D /* CarListViewControllerTests.swift in Sources */,
+				693FB0932514AEA4006C33C2 /* NewCarViewControllerTests.swift in Sources */,
 				693FB08F251491C6006C33C2 /* DetailViewControllerTests.swift in Sources */,
 				69B5A2CD251355090008367D /* CarManagerTests.swift in Sources */,
 				69E847342513BE6800CE5940 /* CarListDataSourceTests.swift in Sources */,
