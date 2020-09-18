@@ -56,4 +56,52 @@ class DetailViewControllerTests: XCTestCase {
     func testHasBodyTypeLabelInView() {
         XCTAssertTrue(sut.bodyTypeLabel.isDescendant(of: sut.view))
     }
+    
+    func testSetValueToYearOfIssueLabel() {
+        let car = Car(yearOfIssue: "Foo",
+                      manufacture: "Bar",
+                      model: "Baz",
+                      bodyType: "Bat")
+        sut.car = car
+        
+        sut.beginAppearanceTransition(true, animated: true)
+        sut.endAppearanceTransition()
+        XCTAssertEqual(sut.yearOfIssueLabel.text, "Foo")
+    }
+    
+    func testSetValueToManufactureLabel() {
+        let car = Car(yearOfIssue: "Foo",
+                      manufacture: "Bar",
+                      model: "Baz",
+                      bodyType: "Bat")
+        sut.car = car
+        
+        sut.beginAppearanceTransition(true, animated: true)
+        sut.endAppearanceTransition()
+        XCTAssertEqual(sut.manufactureLabel.text, "Bar")
+    }
+    
+    func testSetValueToModelLabel() {
+        let car = Car(yearOfIssue: "Foo",
+                      manufacture: "Bar",
+                      model: "Baz",
+                      bodyType: "Bat")
+        sut.car = car
+        
+        sut.beginAppearanceTransition(true, animated: true)
+        sut.endAppearanceTransition()
+        XCTAssertEqual(sut.modelLabel.text, "Baz")
+    }
+    
+    func testSetValueToBodyTypeLabel() {
+        let car = Car(yearOfIssue: "Foo",
+                      manufacture: "Bar",
+                      model: "Baz",
+                      bodyType: "Bat")
+        sut.car = car
+        
+        sut.beginAppearanceTransition(true, animated: true)
+        sut.endAppearanceTransition()
+        XCTAssertEqual(sut.bodyTypeLabel.text, "Bat")
+    }
 }

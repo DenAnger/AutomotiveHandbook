@@ -42,7 +42,10 @@ class CarCellTests: XCTestCase {
     }
     
     func testConfigureSetsModel() {
-        let car = Car(yearOfIssue: "Foo", manufacture: "Bar", model: "Baz", bodyType: "Bat")
+        let car = Car(yearOfIssue: "Foo",
+                      manufacture: "Bar",
+                      model: "Baz",
+                      bodyType: "Bat")
         cell.configure(with: car)
         XCTAssertEqual(cell.modelLabel.text, car.model)
     }

@@ -14,4 +14,15 @@ class DetailViewController: UIViewController {
     @IBOutlet var manufactureLabel: UILabel!
     @IBOutlet var modelLabel: UILabel!
     @IBOutlet var bodyTypeLabel: UILabel!
+    
+    var car: Car!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        yearOfIssueLabel.text = car.yearOfIssue
+        manufactureLabel.text = car.manufacture
+        modelLabel.text = car.model
+        bodyTypeLabel.text = car.bodyType
+    }
 }
