@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693FB089251469B8006C33C2 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FB088251469B8006C33C2 /* CarCell.swift */; };
 		69B5A28F251345C60008367D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A28E251345C60008367D /* AppDelegate.swift */; };
 		69B5A291251345C60008367D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A290251345C60008367D /* SceneDelegate.swift */; };
 		69B5A293251345C60008367D /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5A292251345C60008367D /* CarListViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		693FB088251469B8006C33C2 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		69B5A28B251345C60008367D /* AutomotiveHandbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomotiveHandbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B5A28E251345C60008367D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69B5A290251345C60008367D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		693FB0862514696F006C33C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				693FB088251469B8006C33C2 /* CarCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		693FB0872514697C006C33C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		69B5A282251345C60008367D = {
 			isa = PBXGroup;
 			children = (
@@ -113,9 +130,10 @@
 		69B5A28D251345C60008367D /* AutomotiveHandbook */ = {
 			isa = PBXGroup;
 			children = (
+				693FB0862514696F006C33C2 /* Views */,
+				69B5A2C1251346A10008367D /* View Controllers */,
 				69B5A2CE251355120008367D /* Helpers */,
 				69B5A2C425134AD30008367D /* Models */,
-				69B5A2C1251346A10008367D /* View Controllers */,
 				69B5A2BF251346860008367D /* Storyboards */,
 				69B5A2C0251346960008367D /* Resources */,
 				69B5A2BE2513464E0008367D /* Supports */,
@@ -126,9 +144,10 @@
 		69B5A2A4251345D00008367D /* AutomotiveHandbookTests */ = {
 			isa = PBXGroup;
 			children = (
+				693FB0872514697C006C33C2 /* Views */,
+				69B5A2D1251365540008367D /* View Controllers */,
 				69B5A2CB251353D40008367D /* Helpers */,
 				69B5A2C525134AE20008367D /* Models */,
-				69B5A2D1251365540008367D /* View Controllers */,
 				69B5A2C2251347B40008367D /* Supports */,
 			);
 			path = AutomotiveHandbookTests;
@@ -373,6 +392,7 @@
 				69B5A28F251345C60008367D /* AppDelegate.swift in Sources */,
 				69B5A2C925134B320008367D /* Car.swift in Sources */,
 				69B5A291251345C60008367D /* SceneDelegate.swift in Sources */,
+				693FB089251469B8006C33C2 /* CarCell.swift in Sources */,
 				69B5A2D0251355280008367D /* CarManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,4 +45,15 @@ class CarListDataSourceTests: XCTestCase {
         tableView.reloadData()
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 2)
     }
+    
+    func testCellForRowAtIndexPathReturnsCarCell() {
+        dataSource.carManager?.add(car: Car(yearOfIssue: "Foo",
+                                            manufacture: "Bar",
+                                            model: "Baz",
+                                            bodyType: "Bat"))
+        tableView.reloadData()
+        
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(cell is CarCell)
+    }
 }
