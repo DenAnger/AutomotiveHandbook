@@ -16,4 +16,23 @@ class NewCarViewController: UIViewController {
     @IBOutlet var bodyTypeTextField: UITextField!
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var cancelButton: UIButton!
+    
+    var carManager: CarManager!
+    
+    @IBAction func saveButtonPressed() {
+        let yearOfIssue = yearOfIssueTextField.text
+        let manufacturer = manufacturerTextField.text
+        let model = modelTextField.text
+        let bodyType = bodyTypeTextField.text
+        
+        let car = Car(yearOfIssue: yearOfIssue ?? "",
+                      manufacturer: manufacturer ?? "",
+                      model: model ?? "",
+                      bodyType: bodyType ?? "")
+        carManager.add(car: car)
+    }
+    
+    @IBAction func cancelButtonPressed() {
+        dismiss(animated: true)
+    }
 }

@@ -48,4 +48,21 @@ class NewCarViewControllerTests: XCTestCase {
     func testHasCancelButton() {
         XCTAssertTrue(sut.cancelButton.isDescendant(of: sut.view))
     }
+    
+    func testSaveNewCar() {
+        sut.yearOfIssueTextField.text = "Foo"
+        sut.manufacturerTextField.text = "Bar"
+        sut.modelTextField.text = "Baz"
+        sut.bodyTypeTextField.text = "Bat"
+        
+        sut.carManager = CarManager()
+        sut.saveButtonPressed()
+        
+        let auto = sut.carManager.car(at: 0)
+        let car = Car(yearOfIssue: "Foo",
+                      manufacturer: "Bar",
+                      model: "Baz",
+                      bodyType: "Bat")
+        XCTAssertEqual(auto, car)
+    }
 }
