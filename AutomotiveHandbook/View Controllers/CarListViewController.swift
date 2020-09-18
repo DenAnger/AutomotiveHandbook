@@ -19,5 +19,6 @@ class CarListViewController: UIViewController {
     
     
     @IBAction func addNewCar(_ sender: UIBarButtonItem) {
+        present(NewCarViewController(), animated: true)
     }
 }

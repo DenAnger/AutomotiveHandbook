@@ -41,4 +41,21 @@ class CarListViewControllerTests: XCTestCase {
         let target = sut.navigationItem.rightBarButtonItem?.target
         XCTAssertEqual(target as? CarListViewController, sut)
     }
+    
+    func testOpenNewCarViewController() {
+        guard
+            let addNewCarButton = sut.navigationItem.rightBarButtonItem,
+            let action = addNewCarButton.action
+            else {
+                XCTFail()
+                return
+        }
+        
+        UIApplication.shared.windows.first?.rootViewController = sut
+        sut.performSelector(onMainThread: action,
+                            with: addNewCarButton,
+                            waitUntilDone: true)
+        XCTAssertNotNil(sut.presentedViewController)
+        XCTAssertTrue(sut.presentedViewController is NewCarViewController)
+    }
 }
