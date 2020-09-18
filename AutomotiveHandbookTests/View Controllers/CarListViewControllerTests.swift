@@ -43,43 +43,29 @@ class CarListViewControllerTests: XCTestCase {
     }
     
     func testOpenNewCarViewController() {
-        guard
-            let addNewCarButton = sut.navigationItem.rightBarButtonItem,
-            let action = addNewCarButton.action
-            else {
-                XCTFail()
-                return
-        }
-        
-        UIApplication.shared.windows.first?.rootViewController = sut
-        sut.performSelector(onMainThread: action,
-                            with: addNewCarButton,
-                            waitUntilDone: true)
-        XCTAssertNotNil(sut.presentedViewController)
-        XCTAssertTrue(sut.presentedViewController is NewCarViewController)
-        
-        let newCarViewController = sut.presentedViewController as! NewCarViewController
+        let newCarViewController = presentingNewCarViewController()
         XCTAssertNotNil(newCarViewController.yearOfIssueTextField)
     }
     
     func testSharesSameCarManagerWithNewCarViewController () {
+        let newCarViewController = presentingNewCarViewController()
+        XCTAssertNotNil(sut.dataSource.carManager)
+        XCTAssertTrue(newCarViewController.carManager === sut.dataSource.carManager)
+    }
+    
+    func presentingNewCarViewController() -> NewCarViewController {
         guard
-            let addNewCarButton = sut.navigationItem.rightBarButtonItem,
-            let action = addNewCarButton.action
+        let addNewCarButton = sut.navigationItem.rightBarButtonItem,
+        let action = addNewCarButton.action
             else {
-                XCTFail()
-                return
+                return NewCarViewController()
         }
         
         UIApplication.shared.windows.first?.rootViewController = sut
         sut.performSelector(onMainThread: action,
                             with: addNewCarButton,
                             waitUntilDone: true)
-        XCTAssertNotNil(sut.presentedViewController)
-        XCTAssertTrue(sut.presentedViewController is NewCarViewController)
-        
         let newCarViewController = sut.presentedViewController as! NewCarViewController
-        XCTAssertNotNil(sut.dataSource.carManager)
-        XCTAssertTrue(newCarViewController.carManager === sut.dataSource.carManager)
+        return newCarViewController
     }
 }
