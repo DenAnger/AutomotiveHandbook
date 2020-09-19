@@ -63,10 +63,10 @@ class CarListViewControllerTests: XCTestCase {
     }
     
     func testTappingCellSendsNotification() {
-        let car = Car(yearOfIssue: "Foo",
-                      manufacturer: "Bar",
-                      model: "Baz",
-                      bodyType: "Bat")
+        let car = Car(yearOfIssue: "2015",
+                      manufacturer: "Toyota",
+                      model: "Camry",
+                      bodyType: "Sedan")
         sut.dataSource.carManager?.add(car: car)
         
         expectation(

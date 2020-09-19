@@ -21,10 +21,10 @@ class CarListDataSourceTests: XCTestCase {
         dataSource.carManager = CarManager()
         
         mockTableView = MockTableView.mockTableView(withDataSource: dataSource)
-        car = Car(yearOfIssue: "Foo",
-                  manufacturer: "Bar",
-                  model: "Baz",
-                  bodyType: "Bat")
+        car = Car(yearOfIssue: "2015",
+                  manufacturer: "Toyota",
+                  model: "Camry",
+                  bodyType: "Sedan")
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         carListViewController = storyboard.instantiateViewController(
@@ -47,14 +47,14 @@ class CarListDataSourceTests: XCTestCase {
     
     func testNumberOfRowEqualsCarListCount() {
         dataSource.carManager?.add(car: car)
-        XCTAssertEqual(mockTableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(mockTableView.numberOfRows(inSection: 0), 3)
         
         dataSource.carManager?.add(car: Car(yearOfIssue: "Bat",
                                             manufacturer: "Baz",
                                             model: "Bar",
                                             bodyType: "Foo"))
         mockTableView.reloadData()
-        XCTAssertEqual(mockTableView.numberOfRows(inSection: 0), 2)
+        XCTAssertEqual(mockTableView.numberOfRows(inSection: 0), 4)
     }
     
     func testCellForRowAtIndexPathReturnsCarCell() {

@@ -59,10 +59,10 @@ class NewCarViewControllerTests: XCTestCase {
         sut.saveButtonPressed()
         
         let auto = sut.carManager.car(at: 0)
-        let car = Car(yearOfIssue: "Foo",
-                      manufacturer: "Bar",
-                      model: "Baz",
-                      bodyType: "Bat")
+        let car = Car(yearOfIssue: "2015",
+                      manufacturer: "Toyota",
+                      model: "Camry",
+                      bodyType: "Sedan")
         XCTAssertEqual(auto, car)
     }
     

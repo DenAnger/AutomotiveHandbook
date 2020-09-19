@@ -16,7 +16,7 @@ class CarManagerTests: XCTestCase {
 
     override func setUpWithError() throws {
         carManager = CarManager()
-        car = Car(yearOfIssue: "Foo",
+        car = Car(yearOfIssue: "2015",
                   manufacturer: "Bar",
                   model: "Baz",
                   bodyType: "Bat")
@@ -28,12 +28,12 @@ class CarManagerTests: XCTestCase {
     }
     
     func testInitCarManagerWithEmptyList() {
-        XCTAssertEqual(carManager.carsCount, 0)
+        XCTAssertEqual(carManager.carsCount, 3)
     }
     
     func testAddCarIncrementCarListCount() {
         carManager.add(car: car)
-        XCTAssertEqual(carManager.carsCount, 1)
+        XCTAssertEqual(carManager.carsCount, 4)
     }
     
     func testCarAtIndexIsAddedCar() {
@@ -51,6 +51,6 @@ class CarManagerTests: XCTestCase {
                                 manufacturer: "Bar",
                                 model: "Baz",
                                 bodyType: "Bat"))
-        XCTAssertEqual(carManager.carsCount, 1)
+        XCTAssertEqual(carManager.carsCount, 4)
     }
 }
