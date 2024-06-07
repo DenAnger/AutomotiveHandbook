@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -141,10 +141,10 @@
 		69B5A28D251345C60008367D /* AutomotiveHandbook */ = {
 			isa = PBXGroup;
 			children = (
-				693FB0862514696F006C33C2 /* Views */,
-				69B5A2C1251346A10008367D /* View Controllers */,
-				69B5A2CE251355120008367D /* Helpers */,
 				69B5A2C425134AD30008367D /* Models */,
+				693FB0862514696F006C33C2 /* Views */,
+				69B5A2C1251346A10008367D /* Controllers */,
+				69B5A2CE251355120008367D /* Helpers */,
 				69B5A2BF251346860008367D /* Storyboards */,
 				69B5A2C0251346960008367D /* Resources */,
 				69B5A2BE2513464E0008367D /* Supports */,
@@ -155,10 +155,10 @@
 		69B5A2A4251345D00008367D /* AutomotiveHandbookTests */ = {
 			isa = PBXGroup;
 			children = (
-				693FB0872514697C006C33C2 /* Views */,
-				69B5A2D1251365540008367D /* View Controllers */,
-				69B5A2CB251353D40008367D /* Helpers */,
 				69B5A2C525134AE20008367D /* Models */,
+				693FB0872514697C006C33C2 /* Views */,
+				69B5A2D1251365540008367D /* Controllers */,
+				69B5A2CB251353D40008367D /* Helpers */,
 				69B5A2C2251347B40008367D /* Supports */,
 			);
 			path = AutomotiveHandbookTests;
@@ -199,14 +199,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		69B5A2C1251346A10008367D /* View Controllers */ = {
+		69B5A2C1251346A10008367D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				69B5A292251345C60008367D /* CarListViewController.swift */,
 				693FB08C2514877D006C33C2 /* DetailViewController.swift */,
 				693FB0902514ADCD006C33C2 /* NewCarViewController.swift */,
 			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		69B5A2C2251347B40008367D /* Supports */ = {
@@ -261,14 +261,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		69B5A2D1251365540008367D /* View Controllers */ = {
+		69B5A2D1251365540008367D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				69B5A2D2251365980008367D /* CarListViewControllerTests.swift */,
 				693FB08E251491C6006C33C2 /* DetailViewControllerTests.swift */,
 				693FB0922514AEA4006C33C2 /* NewCarViewControllerTests.swift */,
 			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,8 +333,9 @@
 		69B5A283251345C60008367D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "Denis Abramov";
 				TargetAttributes = {
 					69B5A28A251345C60008367D = {
@@ -498,6 +499,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -508,6 +510,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -558,6 +561,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -568,6 +572,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

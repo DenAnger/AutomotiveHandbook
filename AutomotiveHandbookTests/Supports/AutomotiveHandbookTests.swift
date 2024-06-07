@@ -9,14 +9,7 @@
 import XCTest
 @testable import AutomotiveHandbook
 
-class AutomotiveHandbookTests: XCTestCase {
-
-    override func setUpWithError() throws {
-    }
-
-    override func tearDownWithError() throws {
-    }
-    
+class AutomotiveHandbookTests: XCTestCase {    
     func testInitialViewControllerIsCarListViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
